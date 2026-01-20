@@ -4,25 +4,25 @@
 
 AutoTask is an agentic Android automation system that allows users to control and automate Android applications using natural language. Built using Droidrun's Agent Framework, the system plans tasks intelligently and executes them on real Android devices using UI automation.
 
-## 🔥Why this project stands out 
-Most Android automation tools are rule-based and fragile. This project goes beyond scripts.
+## 🔥Why this project stands out  <br>
+Most Android automation tools are rule-based and fragile. This project goes beyond scripts. <br>
 This agent understands intent. 
 
-**Give it a task line:** 
+**Give it a task line:** <br>
 "Open Settings and turn on WiFi"
 
 It autonomously: <br>
-1. Understands the goal
-2. Breaks it into steps
-3. Executes actions on Android(or simulates them intelligently)
-
+1. Understands the goal <br>
+2. Breaks it into steps <br>
+3. Executes actions on Android(or simulates them intelligently) <br>
+ 
 This is true Agentic Automation, not macros.
 
-## 🧠What problem does it solve? 
-Mobile workflows are repetitive, UI-heavy, and inaccessible to non-technical users. Existing automation requires:
-• Manual scripting 
-• App-specific rules 
-• Frequent breakage on UI changes
+## 🧠What problem does it solve?  <br>
+Mobile workflows are repetitive, UI-heavy, and inaccessible to non-technical users. Existing automation requires: <br>
+• Manual scripting  <br>
+• App-specific rules  <br>
+• Frequent breakage on UI changes <br>
 This project removes that friction by enabling natural language control over Android apps.
 
 ## 🏗️Architecture
@@ -36,25 +36,25 @@ Android Action Engine (uiautomator2) <br>
     ↓ <br>
 Task Completion + Memory <br>
 
-## Key Capabilities 
-• Task Planning - Converts intent into step-by-step plans 
-• Agentic Execution - Executes actions autonomously 
-• Self-healing - Can re-plan on failure 
-• Mock Mode - Demo-ready without device or paid APIs 
-• Real Device Ready - Work on USB-connected Android
+## Key Capabilities  <br>
+• Task Planning - Converts intent into step-by-step plans  <br>
+• Agentic Execution - Executes actions autonomously  <br>
+• Self-healing - Can re-plan on failure <br>
+• Mock Mode - Demo-ready without device or paid APIs  <br>
+• Real Device Ready - Work on USB-connected Android <br>
 
 ## Demo (Hackathon Mode) <br>
 To ensure smooth judging, the system supports MOCK MODE: <br>
 • No Android device required <br>
 • No paid API calls <br>
 • Fully simulated execution with logs  <br>
-**Example demo task**: 
+**Example demo task:** <br> 
 Open settings and turn on WiFi <br>
-**Output**:
-• Generated plan 
-• Executed steps
-• Successful task completion 
-This guarantees reliable demo videos under hackathon constraints.
+**Output**: <br>
+• Generated plan  <br>
+• Executed steps <br>
+• Successful task completion  <br>
+This guarantees reliable demo videos under hackathon constraints. <br>
 
 ## 📂Project Structure
 autotask-agentic-android/ <br>
@@ -78,12 +78,12 @@ autotask-agentic-android/ <br>
 - **Loguru(clean execution logs)** <br>
 - **dotenv (secure config)** <br>
 
-## 🎯Use Cases 
-• Accessibility automation for elderly users 
-• Personal mobile assistants
-• QA testing & app navigation
-• Productivity workflows 
-• No-code Android automation
+## 🎯Use Cases  <br>
+• Accessibility automation for elderly users  <br>
+• Personal mobile assistants <br>
+• QA testing & app navigation <br>
+• Productivity workflows  <br> 
+• No-code Android automation <br>
 
 ## 📝License
 MIT License

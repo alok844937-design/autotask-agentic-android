@@ -34,13 +34,13 @@ Basic retry and fallback strategies help the agent continue execution when UI el
 Supports workfl;ows that span across multiple Android applications in a single command.
 
 ## 🏗️Architecture
-User Input (Natural Language)
+User Input (Natural Language) <br>
     ↓
-TaskPlanner (Claude AI)
+TaskPlanner (Claude AI) <br>
     ↓
-Execution Plan (Steps)
+Execution Plan (Steps) <br>
     ↓
-AndroidActions (Executor)
+AndroidActions (Executor) <br>
     ↓
 Device UI Interaction (ADB + UIAutomator)
 
@@ -123,6 +123,6 @@ Solo Participant
 • Google for the amazing hackathon opportunity
 
 ## 📧Contact Details 
-**G-mail**:alok844937@gmail.com
-**Demo Video**: YT link
+**G-mail**:alok844937@gmail.com<br>
+**Demo Video**: https://youtu.be/gpYgtLIwDRI?si=tTeoxLv7tPXgH9lC <br>
 **GitHub**: https://github.com/alok844937-design

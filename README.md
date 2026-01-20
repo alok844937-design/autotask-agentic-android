@@ -1,115 +1,128 @@
-<picture align="center">
-  <source media="(prefers-color-scheme: dark)" srcset="./static/droidrun-dark.png">
-  <source media="(prefers-color-scheme: light)" srcset="./static/droidrun.png">
-  <img src="./static/droidrun.png"  width="full">
-</picture>
+# 🤖AutoTask - Agentic Android Automation 
 
-<div align="center">
+**Droidrun DevSprint 2026 | GDG on Campus IIT Patna**
 
-[![Docs](https://img.shields.io/badge/Docs-📕-0D9373?style=for-the-badge)](https://docs.droidrun.ai)
-[![Cloud](https://img.shields.io/badge/Cloud-☁️-0D9373?style=for-the-badge)](https://cloud.droidrun.ai/sign-in?waitlist=true)
+AutoTask is an agentic Android automation system that allows users to control and automate Android applications using natural language. Built using Droidrun's Agent Framework, the system plans tasks intelligently and executes them on real Android devices using UI automation.
 
+## 🚀Problem Statement 
+Performing repetitivew or multi-step tasks on mobile devices is time-consuming and error-prone. Existing automation tools require scripting or rigid rule-based flows, making them inaccessible to non-technical users.
 
-[![GitHub stars](https://img.shields.io/github/stars/droidrun/droidrun?style=social)](https://github.com/droidrun/droidrun/stargazers)
-[![droidrun.ai](https://img.shields.io/badge/droidrun.ai-white)](https://droidrun.ai)
-[![Twitter Follow](https://img.shields.io/twitter/follow/droid_run?style=social)](https://x.com/droid_run)
-[![Discord](https://img.shields.io/discord/1360219330318696488?color=white&label=Discord&logo=discord&logoColor=white)](https://discord.gg/ZZbKEZZkwK)
-[![Benchmark](https://img.shields.io/badge/Benchmark-91.4﹪-white)](https://droidrun.ai/benchmark)
+## 💡Solution 
+AutoTask enables **natural language driven Android automation**. Users describe what they want to do, and an AI-powered agent: 
+1. Understands the task 
+2. Breaks it into actionable steps 
+3. Executes those steps autonomously on Android apps 
 
+## 🌟Key Features
+### 1. Natural Language Task Execution Users can describe tasks in plain English:
+"Open WhatsApp and send 'Hello' to Alex" "Open Settings and enable Dark Mode"
 
+### 2. Agentic Task Planning 
+AN LLM-based planner converts user intent into structured step-by-step plans suitable for Android execution.
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=983810&theme=dark&period=daily&t=1753948032207">
-  <source media="(prefers-color-scheme: light)" srcset="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=983810&theme=neutral&period=daily&t=1753948125523">
-  <a href="https://www.producthunt.com/products/droidrun-framework-for-mobile-agent?embed=true&utm_source=badge-top-post-badge&utm_medium=badge&utm_source=badge-droidrun" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=983810&theme=neutral&period=daily&t=1753948125523" alt="Droidrun - Give&#0032;AI&#0032;native&#0032;control&#0032;of&#0032;physical&#0032;&#0038;&#0032;virtual&#0032;phones&#0046; | Product Hunt" style="width: 200px; height: 54px;" width="200" height="54" /></a>
-</picture>
+### 3. Android UI Automation 
+Uses *uiautomator2 + ADB** to:
+- Launch apps
+- Click buttons 
+- Enter Text 
+- Navigate screens 
 
+### 4. Error Handling & Recovery 
+Basic retry and fallback strategies help the agent continue execution when UI elemnets are not immediately found. 
 
-[Deutsch](https://zdoc.app/de/droidrun/droidrun) | 
-[Español](https://zdoc.app/es/droidrun/droidrun) | 
-[français](https://zdoc.app/fr/droidrun/droidrun) | 
-[日本語](https://zdoc.app/ja/droidrun/droidrun) | 
-[한국어](https://zdoc.app/ko/droidrun/droidrun) | 
-[Português](https://zdoc.app/pt/droidrun/droidrun) | 
-[Русский](https://zdoc.app/ru/droidrun/droidrun) | 
-[中文](https://zdoc.app/zh/droidrun/droidrun)
+### 5. Multi-App Workflows 
+Supports workfl;ows that span across multiple Android applications in a single command.
 
-</div>
+## 🏗️Architecture
+User Input (Natural Language)
+    ↓
+TaskPlanner (Claude AI)
+    ↓
+Execution Plan (Steps)
+    ↓
+AndroidActions (Executor)
+    ↓
+Device UI Interaction (ADB + UIAutomator)
 
+## 📂Project Structure
+autotask-agentic-android/
+├── autotask_agent/
+│   ├── __init__.py
+│   ├── agent.py          # Main agent orchestrator
+│   ├── planner.py        # AI-powered task planning
+│   ├── actions.py        # Low-level Android actions
+│   └── memory.py         # Persistent learning system
+├── prompts/              # AI prompts and templates
+├── demos/                # Demo scripts and videos
+├── run_agent.py          # CLI runner
+├── README.md
+└── requirements.txt
 
+## 🛠️Tech Stack
+- **Python 3.10**
+- **Droidrun Agent Framework**
+- **uiautomator2**
+- **ADB (pure-python-adb)**
+- **Anthropic / OpenAI APIs**
+- **SQLite (via SQLAlchemy)**
 
-DroidRun is a powerful framework for controlling Android and iOS devices through LLM agents. It allows you to automate device interactions using natural language commands. [Checkout our benchmark results](https://droidrun.ai/benchmark)
+## 💡Example Use Cases
+agent.execute_task("Open WhatsApp and send 'Metting at 3 PM' to John")
+agent.execute_task("Open Settings and turn on Dark Mode")
+agent.execute_task("Open Gmail and check unread emails")
 
-## Why Droidrun?
+## 🧠Why Agentic? 
+Unlike rule-based automation: 
+• The agent plans dynamically 
+• Adjusts execution based on app state 
+• Can recover from minor UI changes
 
-- 🤖 Control Android and iOS devices with natural language commands
-- 🔀 Supports multiple LLM providers (OpenAI, Anthropic, Gemini, Ollama, DeepSeek)
-- 🧠 Planning capabilities for complex multi-step tasks
-- 💻 Easy to use CLI with enhanced debugging features
-- 🐍 Extendable Python API for custom automations
-- 📸 Screenshot analysis for visual understanding of the device
-- 🫆 Execution tracing with Arize Phoenix
+## 🔒Privacy & Safety
+• Device interaction happens locally 
+• Only task planning uses cloud-based LLM APIs 
+• No user data is stored permanently unless explicitly required 
 
-## 📦 Installation
+## 🏆Hackathon Value
+Innovation
+• Agent-based Android automation 
+• Natural language interface for mobile workflows 
 
-```bash
-pip install 'droidrun[google,anthropic,openai,deepseek,ollama,dev]'
-```
+Pratical Impact 
+• Reduces reptitive mobile tasks 
+• Accessible to non-technicaal users
 
-## 🚀 Quickstart
-Read on how to get droidrun up and running within seconds in [our docs](https://docs.droidrun.ai/v3/quickstart)!   
+Demo Strength 
+• Live execution on real Android device 
+• No pre-recorded flows
 
-[![Quickstart Video](https://img.youtube.com/vi/4WT7FXJah2I/0.jpg)](https://www.youtube.com/watch?v=4WT7FXJah2I)
+## 🛠️Setup Instructions
+Prerequisites 
+• Android device or emulator 
+• USB Debugging enabled 
+• Python 3.10+
 
-## 🎬 Demo Videos
+Installation 
+pip install -r requirements.txt
 
-1. **Accommodation booking**: Let Droidrun search for an apartment for you
+Verify Device Connection 
+adb Devices 
 
-   [![Droidrun Accommodation Booking Demo](https://img.youtube.com/vi/VUpCyq1PSXw/0.jpg)](https://youtu.be/VUpCyq1PSXw)
+Run Agent 
+python run_agent.py
 
-<br>
+## 📝License
+MIT License
 
-2. **Trend Hunter**: Let Droidrun hunt down trending posts
+## 👤Team
+Solo Participant 
+• Alok - Agent Design, Android Automation, Planning & Execution
 
-   [![Droidrun Trend Hunter Demo](https://img.youtube.com/vi/7V8S2f8PnkQ/0.jpg)](https://youtu.be/7V8S2f8PnkQ)
+## 🙏Acknowledgments
+• Anthropic Claude for AI capabilities
+• uiautomator2 for Android automation
+• Google for the amazing hackathon opportunity
 
-<br>
-
-3. **Streak Saver**: Let Droidrun save your streak on your favorite language learning app
-
-   [![Droidrun Streak Saver Demo](https://img.youtube.com/vi/B5q2B467HKw/0.jpg)](https://youtu.be/B5q2B467HKw)
-
-
-## 💡 Example Use Cases
-
-- Automated UI testing of mobile applications
-- Creating guided workflows for non-technical users
-- Automating repetitive tasks on mobile devices
-- Remote assistance for less technical users
-- Exploring mobile UI with natural language commands
-
-## 👥 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
-
-## Security Checks
-
-To ensure the security of the codebase, we have integrated security checks using `bandit` and `safety`. These tools help identify potential security issues in the code and dependencies.
-
-### Running Security Checks
-
-Before submitting any code, please run the following security checks:
-
-1. **Bandit**: A tool to find common security issues in Python code.
-   ```bash
-   bandit -r droidrun
-   ```
-
-2. **Safety**: A tool to check your installed dependencies for known security vulnerabilities.
-   ```bash
-   safety scan
-   ```
+## 📧Contact Details 
+**G-mail**:alok844937@gmail.com
+**Demo Video**: YT link
+**GitHub**: https://github.com/alok844937-design

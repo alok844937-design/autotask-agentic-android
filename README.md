@@ -4,45 +4,57 @@
 
 AutoTask is an agentic Android automation system that allows users to control and automate Android applications using natural language. Built using Droidrun's Agent Framework, the system plans tasks intelligently and executes them on real Android devices using UI automation.
 
-## 🚀Problem Statement 
-Performing repetitivew or multi-step tasks on mobile devices is time-consuming and error-prone. Existing automation tools require scripting or rigid rule-based flows, making them inaccessible to non-technical users.
+## 🔥Why this project stands out 
+Most Android automation tools are rule-based and fragile. This project goes beyond scripts.
+This agent understands intent. 
 
-## 💡Solution 
-AutoTask enables **natural language driven Android automation**. Users describe what they want to do, and an AI-powered agent: 
-1. Understands the task 
-2. Breaks it into actionable steps 
-3. Executes those steps autonomously on Android apps 
+**Give it a task line:** 
+"Open Settings and turn on WiFi"
 
-## 🌟Key Features
-### 1. Natural Language Task Execution Users can describe tasks in plain English:
-"Open WhatsApp and send 'Hello' to Alex" "Open Settings and enable Dark Mode"
+It autonomously: <br>
+1. Understands the goal
+2. Breaks it into steps
+3. Executes actions on Android(or simulates them intelligently)
 
-### 2. Agentic Task Planning 
-AN LLM-based planner converts user intent into structured step-by-step plans suitable for Android execution.
+This is true Agentic Automation, not macros.
 
-### 3. Android UI Automation 
-Uses *uiautomator2 + ADB** to:
-- Launch apps
-- Click buttons 
-- Enter Text 
-- Navigate screens 
-
-### 4. Error Handling & Recovery 
-Basic retry and fallback strategies help the agent continue execution when UI elemnets are not immediately found. 
-
-### 5. Multi-App Workflows 
-Supports workfl;ows that span across multiple Android applications in a single command.
+## 🧠What problem does it solve? 
+Mobile workflows are repetitive, UI-heavy, and inaccessible to non-technical users. Existing automation requires:
+• Manual scripting 
+• App-specific rules 
+• Frequent breakage on UI changes
+This project removes that friction by enabling natural language control over Android apps.
 
 ## 🏗️Architecture
 User Input (Natural Language) <br>
     ↓ <br>
-TaskPlanner (Claude AI) <br>
+LLM-based Planner<br>
     ↓ <br>
 Execution Plan (Steps) <br>
     ↓ <br>
-AndroidActions (Executor) <br>
+Android Action Engine (uiautomator2) <br>
     ↓ <br>
-Device UI Interaction (ADB + UIAutomator) <br>
+Task Completion + Memory <br>
+
+## Key Capabilities 
+• Task Planning - Converts intent into step-by-step plans 
+• Agentic Execution - Executes actions autonomously 
+• Self-healing - Can re-plan on failure 
+• Mock Mode - Demo-ready without device or paid APIs 
+• Real Device Ready - Work on USB-connected Android
+
+## Demo (Hackathon Mode) <br>
+To ensure smooth judging, the system supports MOCK MODE: <br>
+• No Android device required <br>
+• No paid API calls <br>
+• Fully simulated execution with logs  <br>
+**Example demo task**: 
+Open settings and turn on WiFi <br>
+**Output**:
+• Generated plan 
+• Executed steps
+• Successful task completion 
+This guarantees reliable demo videos under hackathon constraints.
 
 ## 📂Project Structure
 autotask-agentic-android/ <br>
@@ -59,68 +71,26 @@ autotask-agentic-android/ <br>
 └── requirements.txt          <br>
 
 ## 🛠️Tech Stack
-- **Python 3.10** <br>
+- **Python 3.12** <br>
 - **Droidrun Agent Framework** <br>
-- **uiautomator2** <br>
-- **ADB (pure-python-adb)** <br>
-- **Anthropic / OpenAI APIs** <br>
-- **SQLite (via SQLAlchemy)** <br>
+- **uiautomator2 (Android control)** <br>
+- **LLM-based Planning** <br>
+- **Loguru(clean execution logs)** <br>
+- **dotenv (secure config)** <br>
 
-## 💡Example Use Cases
-agent.execute_task("Open WhatsApp and send 'Metting at 3 PM' to John") <br>
-agent.execute_task("Open Settings and turn on Dark Mode") <br>
-agent.execute_task("Open Gmail and check unread emails") <br>
-
-## 🧠Why Agentic? 
-Unlike rule-based automation: <br>
-• The agent plans dynamically <br>
-• Adjusts execution based on app state <br>
-• Can recover from minor UI changes <br>
-
-## 🔒Privacy & Safety
-• Device interaction happens locally <br>
-• Only task planning uses cloud-based LLM APIs  <br>
-• No user data is stored permanently unless explicitly required  <br>
-
-## 🏆Hackathon Value
-Innovation <br>
-• Agent-based Android automation <br>
-• Natural language interface for mobile workflows <br>
-
-Pratical Impact <br>
-• Reduces reptitive mobile tasks <br>
-• Accessible to non-technicaal users <br>
-
-Demo Strength <br>
-• Live execution on real Android device <br>
-• No pre-recorded flows <br>
-
-## 🛠️Setup Instructions
-Prerequisites <br>
-• Android device or emulator <br>
-• USB Debugging enabled <br>
-• Python 3.10+ <br>
-
-Installation <br>
-pip install -r requirements.txt
-
-Verify Device Connection <br>
-adb Devices 
-
-Run Agent <br>
-python run_agent.py
+## 🎯Use Cases 
+• Accessibility automation for elderly users 
+• Personal mobile assistants
+• QA testing & app navigation
+• Productivity workflows 
+• No-code Android automation
 
 ## 📝License
 MIT License
 
-## 👤Team
-Solo Participant 
-• Alok - Agent Design, Android Automation, Planning & Execution
-
-## 🙏Acknowledgments
-• Anthropic Claude for AI capabilities <br>
-• uiautomator2 for Android automation <br>
-• Google for the amazing hackathon opportunity
+## 👤Author
+Solo Participant - Droidrun DevSprint 2026
+• Alok - Built under extreme time constraints with a focus on clarity, agentic design, and real-world impact.
 
 ## 📧Contact Details 
 **G-mail**:alok844937@gmail.com<br>

@@ -45,69 +45,69 @@ AndroidActions (Executor) <br>
 Device UI Interaction (ADB + UIAutomator)
 
 ## 📂Project Structure
-autotask-agentic-android/
-├── autotask_agent/
-│   ├── __init__.py
-│   ├── agent.py          # Main agent orchestrator
-│   ├── planner.py        # AI-powered task planning
-│   ├── actions.py        # Low-level Android actions
-│   └── memory.py         # Persistent learning system
-├── prompts/              # AI prompts and templates
-├── demos/                # Demo scripts and videos
-├── run_agent.py          # CLI runner
-├── README.md
-└── requirements.txt
+autotask-agentic-android/ <br>
+├── autotask_agent/ <br>
+│   ├── __init__.py <br>
+│   ├── agent.py          # Main agent orchestrator <br>
+│   ├── planner.py        # AI-powered task planning <br>
+│   ├── actions.py        # Low-level Android actions <br>
+│   └── memory.py         # Persistent learning system <br>
+├── prompts/              # AI prompts and templates <br>
+├── demos/                # Demo scripts and videos  <br>
+├── run_agent.py          # CLI runner <br>
+├── README.md <br>
+└── requirements.txt <br>
 
 ## 🛠️Tech Stack
-- **Python 3.10**
-- **Droidrun Agent Framework**
-- **uiautomator2**
-- **ADB (pure-python-adb)**
-- **Anthropic / OpenAI APIs**
-- **SQLite (via SQLAlchemy)**
+- **Python 3.10** <br>
+- **Droidrun Agent Framework** <br>
+- **uiautomator2** <br>
+- **ADB (pure-python-adb)** <br>
+- **Anthropic / OpenAI APIs** <br>
+- **SQLite (via SQLAlchemy)** <br>
 
 ## 💡Example Use Cases
-agent.execute_task("Open WhatsApp and send 'Metting at 3 PM' to John")
-agent.execute_task("Open Settings and turn on Dark Mode")
-agent.execute_task("Open Gmail and check unread emails")
+agent.execute_task("Open WhatsApp and send 'Metting at 3 PM' to John") <br>
+agent.execute_task("Open Settings and turn on Dark Mode") <br>
+agent.execute_task("Open Gmail and check unread emails") <br>
 
 ## 🧠Why Agentic? 
 Unlike rule-based automation: 
-• The agent plans dynamically 
-• Adjusts execution based on app state 
-• Can recover from minor UI changes
+• The agent plans dynamically <br>
+• Adjusts execution based on app state <br>
+• Can recover from minor UI changes <br>
 
 ## 🔒Privacy & Safety
-• Device interaction happens locally 
-• Only task planning uses cloud-based LLM APIs 
-• No user data is stored permanently unless explicitly required 
+• Device interaction happens locally <br>
+• Only task planning uses cloud-based LLM APIs  <br>
+• No user data is stored permanently unless explicitly required  <br>
 
 ## 🏆Hackathon Value
-Innovation
-• Agent-based Android automation 
-• Natural language interface for mobile workflows 
+Innovation <br>
+• Agent-based Android automation <br>
+• Natural language interface for mobile workflows <br>
 
-Pratical Impact 
-• Reduces reptitive mobile tasks 
-• Accessible to non-technicaal users
+Pratical Impact <br>
+• Reduces reptitive mobile tasks <br>
+• Accessible to non-technicaal users <br>
 
-Demo Strength 
-• Live execution on real Android device 
-• No pre-recorded flows
+Demo Strength <br>
+• Live execution on real Android device <br>
+• No pre-recorded flows <br>
 
 ## 🛠️Setup Instructions
-Prerequisites 
-• Android device or emulator 
-• USB Debugging enabled 
-• Python 3.10+
+Prerequisites <br>
+• Android device or emulator <br>
+• USB Debugging enabled <br>
+• Python 3.10+ <br>
 
-Installation 
+Installation <br>
 pip install -r requirements.txt
 
-Verify Device Connection 
+Verify Device Connection <br>
 adb Devices 
 
-Run Agent 
+Run Agent <br>
 python run_agent.py
 
 ## 📝License
@@ -118,8 +118,8 @@ Solo Participant
 • Alok - Agent Design, Android Automation, Planning & Execution
 
 ## 🙏Acknowledgments
-• Anthropic Claude for AI capabilities
-• uiautomator2 for Android automation
+• Anthropic Claude for AI capabilities <br>
+• uiautomator2 for Android automation <br>
 • Google for the amazing hackathon opportunity
 
 ## 📧Contact Details 

@@ -35,19 +35,19 @@ Supports workfl;ows that span across multiple Android applications in a single c
 
 ## 🏗️Architecture
 User Input (Natural Language) <br>
-    ↓
+    ↓ <br>
 TaskPlanner (Claude AI) <br>
-    ↓
+    ↓ <br>
 Execution Plan (Steps) <br>
-    ↓
+    ↓ <br>
 AndroidActions (Executor) <br>
-    ↓
-Device UI Interaction (ADB + UIAutomator)
+    ↓ <br>
+Device UI Interaction (ADB + UIAutomator) <br>
 
 ## 📂Project Structure
 autotask-agentic-android/ <br>
-├── autotask_agent/ <br>
-│   ├── __init__.py <br>
+├── autotask_agent/       <br>
+│   ├── __init__.py       <br>
 │   ├── agent.py          # Main agent orchestrator <br>
 │   ├── planner.py        # AI-powered task planning <br>
 │   ├── actions.py        # Low-level Android actions <br>
@@ -55,8 +55,8 @@ autotask-agentic-android/ <br>
 ├── prompts/              # AI prompts and templates <br>
 ├── demos/                # Demo scripts and videos  <br>
 ├── run_agent.py          # CLI runner <br>
-├── README.md <br>
-└── requirements.txt <br>
+├── README.md                 <br>
+└── requirements.txt          <br>
 
 ## 🛠️Tech Stack
 - **Python 3.10** <br>
@@ -72,7 +72,7 @@ agent.execute_task("Open Settings and turn on Dark Mode") <br>
 agent.execute_task("Open Gmail and check unread emails") <br>
 
 ## 🧠Why Agentic? 
-Unlike rule-based automation: 
+Unlike rule-based automation: <br>
 • The agent plans dynamically <br>
 • Adjusts execution based on app state <br>
 • Can recover from minor UI changes <br>
